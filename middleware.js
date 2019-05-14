@@ -1,9 +1,9 @@
 const proxy = require('http-proxy-middleware');
 
 module.exports = router => {
-    ['/insights', '/insightsbeta'].forEach(path =>
+    ['/', '/beta'].forEach(path =>
         router.use(path, proxy({
-            target: 'https://access.redhat.com/insights/platform',
+            target: 'https://cloud.redhat.com',
             secure: false,
             changeOrigin: true,
 
