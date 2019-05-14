@@ -4,12 +4,8 @@ import { Provider } from 'react-redux';
 import { init } from '../src/store';
 import { configure, addDecorator, setAddon } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
-import { withInfo } from '@storybook/addon-info';
-import logger from 'redux-logger';
 
 import chaptersAddon, { setDefaults } from 'react-storybook-addon-chapters';
-
-import { Button } from '@patternfly/react-core';
 
 import '../src/stories.scss';
 
@@ -20,6 +16,7 @@ const repos = require.context('../src/stories/repos', true, /stories\.js$/);
 const welcome = require.context('../src/stories/welcome', true, /stories\.js$/);
 const charts = require.context('../src/stories/charts', true, /stories\.js$/);
 const deployments = require.context('../src/stories/deployments', true, /stories\.js$/);
+const uxd = require.context('../src/stories/uxd', true, /stories\.js$/);
 
 setDefaults({
   sectionOptions: {
@@ -34,7 +31,7 @@ setAddon(chaptersAddon);
 
 // addon-options
 setOptions({
-  name: 'Red Hat Insights', // Name in top left Corner
+  name: 'cloud.redhat.com', // Name in top left Corner
   url: 'https://github.com/RedHatInsights', // URL
   addonPanelInRight: true,
   sortStoriesByKind: false
@@ -57,6 +54,7 @@ function loadStories() {
   redux.keys().forEach(redux);
   components.keys().forEach(components);
   charts.keys().forEach(charts);
+  uxd.keys().forEach(uxd);
 }
 
 configure(loadStories, module);
