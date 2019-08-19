@@ -55,6 +55,7 @@ function loadStories() {
   repos.keys().forEach(repos);
   patternfly.keys().forEach(patternfly);
   chrome.keys().forEach(chrome);
+  nightly.keys().forEach(nightly);
   deployments.keys().forEach(deployments);
   redux.keys().forEach(redux);
   components.keys().forEach(components);
