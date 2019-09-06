@@ -1,11 +1,11 @@
 {
   "app_name": "storybook",
-  "src_hash": "4c7bbf1e04ac109c343590940fb4a504c84e77c7",
+  "src_hash": "0f2f912b9d984fff64727ff6f469918143f52424",
   "src_tag": "",
   "src_branch": "master",
   "travis": {
     "event_type": "push",
-    "build_number": "462",
-    "build_web_url": "https://travis-ci.org/RedHatInsights/insights-frontend-storybook/builds/566513411"
+    "build_number": "472",
+    "build_web_url": "https://travis-ci.org/RedHatInsights/insights-frontend-storybook/builds/581731039"
   }
 }
